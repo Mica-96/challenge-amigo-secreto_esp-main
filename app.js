@@ -44,8 +44,6 @@ function mostrarLista() {
   }
 }
 
-
-// Función para sortear un amigo secreto
 function sortearAmigo() {
   // 1. Validar que haya amigos en el array
   if (amigos.length === 0) {
@@ -59,8 +57,11 @@ function sortearAmigo() {
   // 3. Obtener el nombre sorteado
   let amigoSorteado = amigos[indiceAleatorio];
 
-  // 4. Mostrar el resultado
+  // 4. Limpiar la lista de amigos
+  let lista = document.getElementById("listaAmigos");
+  lista.innerHTML = "";
+
+  // 5. Mostrar solo el resultado
   let resultado = document.getElementById("resultado");
   resultado.innerHTML = `<li>El amigo secreto es: <strong>${amigoSorteado}</strong></li>`;
 }
-
